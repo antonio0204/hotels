@@ -157,3 +157,4 @@ notus-angular
 └── tslint.json
 ```
 
+### By Anner Ibarra and Ronal Aguirre
