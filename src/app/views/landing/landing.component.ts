@@ -1,11 +1,23 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+import { CopysService } from '../../shared/updateData/copys.service';
 
 @Component({
-  selector: "app-landing",
-  templateUrl: "./landing.component.html",
+  selector: 'app-landing',
+  templateUrl: './landing.component.html'
 })
 export class LandingComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+  title = '';
+  subtitle = '';
+
+
+  constructor(public copysService: CopysService){}
+
+  ngOnInit(): void {
+
+    this.title = this.copysService.title;
+    this.subtitle = this.copysService.subtitle;
+  }
+
+
 }
